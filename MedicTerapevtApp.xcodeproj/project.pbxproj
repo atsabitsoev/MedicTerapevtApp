@@ -60,6 +60,10 @@
 		ACBFD211229FC9B6009A1696 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD201229FC9B6009A1696 /* MessageLabel.swift */; };
 		ACBFD212229FC9B6009A1696 /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD202229FC9B6009A1696 /* ChatHeaderVIew.swift */; };
 		ACBFD213229FC9B6009A1696 /* SimpleGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD203229FC9B6009A1696 /* SimpleGradientView.swift */; };
+		ACBFD219229FF9EA009A1696 /* MyPatients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBFD218229FF9EA009A1696 /* MyPatients.storyboard */; };
+		ACBFD21C229FFFD5009A1696 /* MyPatientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21B229FFFD5009A1696 /* MyPatientsVC.swift */; };
+		ACBFD21E229FFFE0009A1696 /* MyPatientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21D229FFFE0009A1696 /* MyPatientsTableView.swift */; };
+		ACBFD220229FFFF2009A1696 /* MyPatientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21F229FFFF2009A1696 /* MyPatientsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +123,10 @@
 		ACBFD201229FC9B6009A1696 /* MessageLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 		ACBFD202229FC9B6009A1696 /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
 		ACBFD203229FC9B6009A1696 /* SimpleGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGradientView.swift; sourceTree = "<group>"; };
+		ACBFD218229FF9EA009A1696 /* MyPatients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPatients.storyboard; sourceTree = "<group>"; };
+		ACBFD21B229FFFD5009A1696 /* MyPatientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsVC.swift; sourceTree = "<group>"; };
+		ACBFD21D229FFFE0009A1696 /* MyPatientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsTableView.swift; sourceTree = "<group>"; };
+		ACBFD21F229FFFF2009A1696 /* MyPatientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +147,6 @@
 				0B4E092D739C0DA9FC7D4DD4 /* Pods-MedicTerapevtApp.debug.xcconfig */,
 				67B269904A9C44C3C2135412 /* Pods-MedicTerapevtApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +183,7 @@
 				ACBFD18C229FBEAF009A1696 /* GlobalEntities */,
 				ACBFD184229FBEAF009A1696 /* GlobalServices */,
 				ACBFD186229FBEAF009A1696 /* Registration+Enter */,
+				ACBFD21A229FFFB3009A1696 /* MyPatientsVC */,
 				ACBFD1CA229FC23C009A1696 /* DiagnosticResultsVC */,
 				ACBFD1DF229FC7B3009A1696 /* ExcercisesVC */,
 				ACBFD1EC229FC9B6009A1696 /* ChatImageVC */,
@@ -259,6 +267,7 @@
 				AC71D906229E6C3000001C29 /* LaunchScreen.storyboard */,
 				ACBFD1DD229FC79B009A1696 /* Excercises.storyboard */,
 				ACBFD1EA229FC9AB009A1696 /* Chat.storyboard */,
+				ACBFD218229FF9EA009A1696 /* MyPatients.storyboard */,
 				AC71D904229E6C3000001C29 /* Assets.xcassets */,
 				ACBFD1B6229FC1C7009A1696 /* Шрифты */,
 			);
@@ -397,6 +406,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		ACBFD21A229FFFB3009A1696 /* MyPatientsVC */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFD21B229FFFD5009A1696 /* MyPatientsVC.swift */,
+				ACBFD21D229FFFE0009A1696 /* MyPatientsTableView.swift */,
+				ACBFD21F229FFFF2009A1696 /* MyPatientsCell.swift */,
+			);
+			path = MyPatientsVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +489,7 @@
 				ACBFD1C2229FC1C7009A1696 /* SF-Compact-Rounded-Light.otf in Resources */,
 				ACBFD1C0229FC1C7009A1696 /* SF-Compact-Rounded-Medium.otf in Resources */,
 				ACBFD1C5229FC1C7009A1696 /* SF-Compact-Rounded-Semibold.otf in Resources */,
+				ACBFD219229FF9EA009A1696 /* MyPatients.storyboard in Resources */,
 				AC71D905229E6C3000001C29 /* Assets.xcassets in Resources */,
 				ACBFD1C6229FC1C7009A1696 /* SF-Compact-Rounded-Black.otf in Resources */,
 				ACBFD1C3229FC1C7009A1696 /* SF-Compact-Rounded-Regular.otf in Resources */,
@@ -563,8 +583,10 @@
 				ACBFD213229FC9B6009A1696 /* SimpleGradientView.swift in Sources */,
 				ACBFD20F229FC9B6009A1696 /* UserImageCell.swift in Sources */,
 				ACBFD1E6229FC7B4009A1696 /* ExcercisesCell.swift in Sources */,
+				ACBFD21E229FFFE0009A1696 /* MyPatientsTableView.swift in Sources */,
 				ACBFD204229FC9B6009A1696 /* ChatImageVC.swift in Sources */,
 				ACBFD1E9229FC7B4009A1696 /* ViewPlay.swift in Sources */,
+				ACBFD21C229FFFD5009A1696 /* MyPatientsVC.swift in Sources */,
 				ACBFD20D229FC9B6009A1696 /* PenPalMessageCell.swift in Sources */,
 				ACBFD212229FC9B6009A1696 /* ChatHeaderVIew.swift in Sources */,
 				ACBFD206229FC9B6009A1696 /* ChatService.swift in Sources */,
@@ -573,6 +595,7 @@
 				ACBFD208229FC9B6009A1696 /* Sender.swift in Sources */,
 				ACBFD205229FC9B6009A1696 /* MessageHistoryService.swift in Sources */,
 				AC71D8FE229E6C2F00001C29 /* AppDelegate.swift in Sources */,
+				ACBFD220229FFFF2009A1696 /* MyPatientsCell.swift in Sources */,
 				ACBFD20E229FC9B6009A1696 /* PenPalImageCell.swift in Sources */,
 				ACBFD207229FC9B6009A1696 /* Message.swift in Sources */,
 				ACBFD19A229FBEAF009A1696 /* ViewUnderTextFields.swift in Sources */,

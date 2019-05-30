@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="inj-eR-xnr">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+        <array key="SF-Compact-Rounded-Regular.otf">
+            <string>SFCompactRounded-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Diagnostic ResultsVC-->
+        <scene sceneID="hnV-2y-Fbs">
+            <objects>
+                <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicTerapevtApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGy-g2-zlR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты диагностики" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aam-uQ-eZW">
+                                <rect key="frame" x="61.5" y="52" width="291.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
+                                <color key="textColor" red="0.23137254901960785" green="0.73725490196078436" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
+                                <rect key="frame" x="0.0" y="89.5" width="414" height="806.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDj-h1-72C" id="YlF-34-Ltr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-fl-pkH" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="0.0" width="378" height="210"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-UZ-ZzP">
+                                                                    <rect key="frame" x="16" y="14.5" width="82.5" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="XRq-UZ-ZzP" firstAttribute="centerY" secondItem="aUL-Fy-rRg" secondAttribute="centerY" id="Pay-1m-zDi"/>
+                                                                <constraint firstItem="XRq-UZ-ZzP" firstAttribute="leading" secondItem="aUL-Fy-rRg" secondAttribute="leading" constant="16" id="zci-5M-1dT"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Модель позвоночника" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-7B-O8m">
+                                                            <rect key="frame" x="16" y="49.5" width="221" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="D7h-C2-Kj0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Позвоночник" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-GR-hma">
+                                                            <rect key="frame" x="8" y="85.5" width="362" height="116.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="aUy-GR-hma" secondAttribute="trailing" constant="8" id="INR-Jm-6le"/>
+                                                        <constraint firstItem="L9C-7B-O8m" firstAttribute="top" secondItem="aUL-Fy-rRg" secondAttribute="bottom" id="IkP-Q8-I3X"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aUy-GR-hma" secondAttribute="bottom" constant="8" id="TTk-VV-ojJ"/>
+                                                        <constraint firstItem="aUy-GR-hma" firstAttribute="top" secondItem="L9C-7B-O8m" secondAttribute="bottom" id="UaK-Cj-GBG"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" id="aOj-bm-i0Y"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="top" secondItem="NhR-fl-pkH" secondAttribute="top" id="atP-a2-jjK"/>
+                                                        <constraint firstItem="L9C-7B-O8m" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="16" id="e7w-He-gRc"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="height" secondItem="NhR-fl-pkH" secondAttribute="height" multiplier="45:190" id="mGM-kK-M5V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aUL-Fy-rRg" secondAttribute="trailing" id="qbR-G5-c5h"/>
+                                                        <constraint firstItem="aUy-GR-hma" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="8" id="yfc-le-rG7"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="top" secondItem="YlF-34-Ltr" secondAttribute="top" id="7Fd-kb-h08"/>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="leading" secondItem="YlF-34-Ltr" secondAttribute="leading" constant="18" id="Ajc-Uu-fE0"/>
+                                                <constraint firstAttribute="trailing" secondItem="NhR-fl-pkH" secondAttribute="trailing" constant="18" id="OOL-g1-fYr"/>
+                                                <constraint firstAttribute="bottom" secondItem="NhR-fl-pkH" secondAttribute="bottom" constant="12" id="fzA-pL-rUh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="viewGradientHeader" destination="aUL-Fy-rRg" id="Wdk-yF-gBh"/>
+                                            <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="inj-eR-xnr" id="UD8-zH-100"/>
+                                    <outlet property="delegate" destination="inj-eR-xnr" id="ndT-2x-yP9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="centerX" secondItem="cGy-g2-zlR" secondAttribute="centerX" id="5Po-mE-wPz"/>
+                            <constraint firstItem="bZA-WI-sbE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aam-uQ-eZW" secondAttribute="trailing" constant="18" id="Hci-1x-0df"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="leading" secondItem="bZA-WI-sbE" secondAttribute="leading" id="KHw-rS-nkw"/>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="top" secondItem="bZA-WI-sbE" secondAttribute="top" constant="8" id="ZhB-5A-yTQ"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="aam-uQ-eZW" secondAttribute="bottom" constant="8" id="av4-Pu-bNl"/>
+                            <constraint firstAttribute="bottom" secondItem="VmU-en-iae" secondAttribute="bottom" id="bEs-Kr-LCD"/>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZA-WI-sbE" secondAttribute="leading" constant="18" id="pTc-Dy-b4W"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="trailing" secondItem="bZA-WI-sbE" secondAttribute="trailing" id="u8M-wo-czV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bZA-WI-sbE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhb-AX-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Позвоночник" width="321" height="108"/>
+    </resources>
+</document>

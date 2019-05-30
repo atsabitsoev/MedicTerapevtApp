@@ -12,11 +12,7 @@ class MyPatientsCell: UITableViewCell {
     
     
     @IBOutlet weak var imagePatient: UIImageView!
-    
-
-    override func layoutSubviews() {
-        
-        imagePatient.layer.cornerRadius = imagePatient.bounds.height / 2
-    }
+    @IBOutlet weak var labName: UILabel!
+    @IBOutlet weak var labDescribtion: UILabel!
 
 }

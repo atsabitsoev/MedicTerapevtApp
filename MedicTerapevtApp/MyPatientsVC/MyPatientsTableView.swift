@@ -30,7 +30,12 @@ extension MyPatientsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MyPatientsCell
+        chatVC.currentPatientName = cell.labName.text
         
         self.tabBarController?.navigationController?.show(chatVC, sender: nil)
     }

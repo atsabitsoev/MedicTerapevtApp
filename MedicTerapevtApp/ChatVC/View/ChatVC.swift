@@ -16,7 +16,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var tfMessage: UITextField!
     @IBOutlet weak var viewUnderTF: SimpleGradientView!
     @IBOutlet weak var constrHeaderTop: NSLayoutConstraint!
-    @IBOutlet weak var constrLabTitleTop: NSLayoutConstraint!
     @IBOutlet weak var viewSend: ViewUnderTextFields!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imPatient: UIImageView!
@@ -25,6 +24,10 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var rxFirstCircle = true
     private var topSafeArea: CGFloat = 0
     private var bottomSafeArea: CGFloat = 0
+    private var keyboardHeight: CGFloat = 0
+    
+    
+    var currentPatientName: String?
     
     
     private var chatService = ChatService.standard
@@ -35,6 +38,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setTitle(currentPatientName ?? "")
         
         addObservers()
         
@@ -49,11 +54,12 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         scrollToBottom()
     }
     
-    override func viewWillLayoutSubviews() {
-        imPatient.layer.cornerRadius = imPatient.bounds.height / 2
-        imPatient.clipsToBounds = true
-    }
     
+    private func setTitle(_ title: String) {
+        
+        self.title = title
+        
+    }
     
     private func addObservers() {
         
@@ -93,6 +99,15 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     //MARK: Клавиатура
     
     private func observeKeyboard() {
+        
+        if #available(iOS 11.0, *) {
+            topSafeArea = view.safeAreaInsets.top
+            bottomSafeArea = view.safeAreaInsets.bottom
+        } else {
+            topSafeArea = topLayoutGuide.length
+            bottomSafeArea = bottomLayoutGuide.length
+        }
+        
         if rxFirstCircle {
             
             RxKeyboard.instance.visibleHeight
@@ -102,11 +117,13 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                         return
                     }
                     if height == 0 {
-                        self.keyboardHide()
+                        self.keyboardHide(height: self.keyboardHeight - self.bottomSafeArea)
                         print("Опустил клавиатуру")
                     } else {
-                        self.keyboardUp(height: height)
+                        self.keyboardUp(height: height - self.bottomSafeArea)
+                        self.keyboardHeight = height
                         print("Поднял клавиатуру")
+                        print("safeAreaBottom = \(self.bottomSafeArea)")
                     }
                 },
                        onCompleted: {
@@ -132,8 +149,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         self.view.frame.origin.y -= height
         constrHeaderTop.constant += height
-        constrLabTitleTop.constant += height + topSafeArea
-        viewSend.shadowView.frame.origin.y += bottomSafeArea
+     //   viewSend.shadowView.frame.origin.y += bottomSafeArea
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
@@ -142,12 +158,11 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
-    private func keyboardHide() {
+    private func keyboardHide(height: CGFloat) {
         
-        self.view.frame.origin.y = 0
-        constrHeaderTop.constant = 0
-        constrLabTitleTop.constant = 8
-        viewSend.shadowView.frame.origin.y -= bottomSafeArea
+        self.view.frame.origin.y += height
+        constrHeaderTop.constant -= height
+      //  viewSend.shadowView.frame.origin.y -= bottomSafeArea
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }

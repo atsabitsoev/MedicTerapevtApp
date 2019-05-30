@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-dq-XZB">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicTerapevtApp" customModuleProvider="target">
@@ -214,25 +214,6 @@
                                     <outlet property="delegate" destination="h2z-z8-INL" id="21R-o6-aj9"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOp-Fc-EJx" customClass="ChatHeaderView" customModule="MedicTerapevtApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чат с пациентом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-gB-YD5">
-                                <rect key="frame" x="107" y="52" width="200.5" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XyU-my-FoV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-PB-siz">
-                                <rect key="frame" x="184" y="90" width="46" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Xdl-PB-siz" secondAttribute="height" multiplier="1:1" id="dU8-ut-wzM"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-Tq-Bf1" customClass="SimpleGradientView" customModule="MedicTerapevtApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,63 +273,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-X6-xHy">
-                                <rect key="frame" x="381" y="44" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="nt0-7Q-Fwa"/>
-                                    <constraint firstAttribute="height" constant="25" id="uqu-Ex-lMI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
-                                <state key="normal" title="×">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="butCloseTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="21i-eh-iIK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mvp-0Y-HTy" secondAttribute="trailing" id="0UB-zY-sxl"/>
-                            <constraint firstItem="Xkq-gB-YD5" firstAttribute="centerX" secondItem="KOp-Fc-EJx" secondAttribute="centerX" id="0YR-En-TeB"/>
                             <constraint firstItem="YOA-dq-XZB" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="2qZ-aj-oOd"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="top" secondItem="yKo-Tq-Bf1" secondAttribute="top" constant="6" id="3Jn-vH-GyR"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="centerY" secondItem="yKo-Tq-Bf1" secondAttribute="centerY" constant="-3" id="6HZ-6T-Rnf"/>
-                            <constraint firstItem="Xdl-PB-siz" firstAttribute="bottom" secondItem="KOp-Fc-EJx" secondAttribute="bottom" constant="8" id="8j7-jN-PcJ"/>
-                            <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="pZ7-X6-xHy" secondAttribute="trailing" constant="8" id="Ap5-Wq-pxQ"/>
-                            <constraint firstItem="Xdl-PB-siz" firstAttribute="top" secondItem="Xkq-gB-YD5" secondAttribute="bottom" constant="8" id="B6s-tQ-fKj"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="bottom" secondItem="yKo-Tq-Bf1" secondAttribute="bottom" constant="-6" id="Bz0-81-e3w"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="CUG-I2-TOc"/>
-                            <constraint firstItem="KOp-Fc-EJx" firstAttribute="top" secondItem="JFO-Ts-wXc" secondAttribute="top" id="F8c-D9-GuA"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" constant="34" id="InJ-nH-W8p"/>
                             <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="BJf-H4-BHY" secondAttribute="trailing" constant="51" id="K4L-gK-FBw"/>
                             <constraint firstAttribute="bottom" secondItem="mvp-0Y-HTy" secondAttribute="bottom" constant="-500" id="K6E-8r-Zg5"/>
-                            <constraint firstItem="KOp-Fc-EJx" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Knv-BL-vfu"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="leading" secondItem="SwG-Gs-rO8" secondAttribute="trailing" id="LXk-sE-uYM"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="top" secondItem="YOA-dq-XZB" secondAttribute="bottom" id="Lt0-L8-hoI"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="top" secondItem="0v7-6a-shU" secondAttribute="bottom" constant="7" id="Mk6-t5-pci"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Q9e-m4-X5M"/>
-                            <constraint firstItem="pZ7-X6-xHy" firstAttribute="top" secondItem="Xkq-gB-YD5" secondAttribute="top" constant="-8" id="U8F-X7-ELb"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="bottom" secondItem="rbT-7E-R5A" secondAttribute="bottom" id="UNF-bb-wLL"/>
-                            <constraint firstItem="Xdl-PB-siz" firstAttribute="centerX" secondItem="JFO-Ts-wXc" secondAttribute="centerX" id="Vtd-nb-oda"/>
                             <constraint firstItem="YOA-dq-XZB" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="eL6-RL-TLw"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="top" secondItem="yKo-Tq-Bf1" secondAttribute="bottom" id="fzg-l2-dtu"/>
-                            <constraint firstItem="KOp-Fc-EJx" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="hBd-4w-zc6"/>
-                            <constraint firstItem="YOA-dq-XZB" firstAttribute="top" secondItem="Xdl-PB-siz" secondAttribute="bottom" constant="8" id="j7c-KQ-U1t"/>
-                            <constraint firstItem="Xkq-gB-YD5" firstAttribute="top" secondItem="rbT-7E-R5A" secondAttribute="top" constant="8" id="kQl-6g-wXo"/>
+                            <constraint firstItem="YOA-dq-XZB" firstAttribute="top" secondItem="rbT-7E-R5A" secondAttribute="top" id="gaY-R8-J6q"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="kq7-EX-Ltu"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="leading" secondItem="JFO-Ts-wXc" secondAttribute="leading" id="l1Q-vc-fEF"/>
-                            <constraint firstItem="KOp-Fc-EJx" firstAttribute="height" secondItem="JFO-Ts-wXc" secondAttribute="height" multiplier="1:7" id="mKM-oy-eHg"/>
                             <constraint firstItem="0v7-6a-shU" firstAttribute="leading" secondItem="BJf-H4-BHY" secondAttribute="trailing" constant="8" id="muO-hT-pBP"/>
                             <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="0v7-6a-shU" secondAttribute="trailing" constant="8" id="rOP-h5-jNd"/>
-                            <constraint firstItem="pZ7-X6-xHy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xkq-gB-YD5" secondAttribute="trailing" constant="8" id="rg4-b6-ra8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rbT-7E-R5A"/>
                     </view>
                     <connections>
-                        <outlet property="constrHeaderTop" destination="F8c-D9-GuA" id="bAf-Kn-StE"/>
-                        <outlet property="constrLabTitleTop" destination="kQl-6g-wXo" id="AKG-1A-ZFl"/>
-                        <outlet property="imPatient" destination="Xdl-PB-siz" id="zY5-sh-ORg"/>
+                        <outlet property="constrHeaderTop" destination="gaY-R8-J6q" id="7aX-dg-dKO"/>
                         <outlet property="tableView" destination="YOA-dq-XZB" id="dve-dM-4Uc"/>
                         <outlet property="tfMessage" destination="BJf-H4-BHY" id="m9h-DZ-Pbo"/>
                         <outlet property="viewSend" destination="0v7-6a-shU" id="sZp-1z-pAy"/>

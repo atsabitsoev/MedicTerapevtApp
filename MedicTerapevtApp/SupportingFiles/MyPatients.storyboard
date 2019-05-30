@@ -26,8 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-D9-K31">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-D9-K31">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyPatientsCell" rowHeight="158" id="9A0-dO-gfj" customClass="MyPatientsCell" customModule="MedicTerapevtApp" customModuleProvider="target">
@@ -40,7 +40,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwF-k8-Oqh" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
                                                     <rect key="frame" x="13" y="3" width="388" height="146"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="2ix-V2-WFb">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBk-su-4vG" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                            <rect key="frame" x="13" y="10" width="76" height="76"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.29999999999999999"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="2ix-V2-WFb" customClass="RoundedImageView" customModule="MedicTerapevtApp" customModuleProvider="target">
                                                             <rect key="frame" x="13" y="10" width="76" height="76"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="2ix-V2-WFb" secondAttribute="height" id="Dbx-Np-opZ"/>
@@ -48,12 +61,15 @@
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ирина Иванова" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-43-hn0">
                                                             <rect key="frame" x="102" y="10" width="273" height="23"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="23" id="6UF-IJ-LQ1"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остеохандроз, дегенеративно-дистрофическое мультифакториальное, хроническое, рецидивирующее заболевание" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="bjg-bL-fLu">
-                                                            <rect key="frame" x="102" y="41" width="273" height="76.5"/>
+                                                            <rect key="frame" x="102" y="41" width="273" height="97"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
                                                             <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -67,9 +83,14 @@
                                                         <constraint firstItem="bjg-bL-fLu" firstAttribute="leading" secondItem="2ix-V2-WFb" secondAttribute="trailing" constant="13" id="DJu-L8-tHp"/>
                                                         <constraint firstAttribute="height" constant="146" id="GBJ-pi-cjh"/>
                                                         <constraint firstItem="2ix-V2-WFb" firstAttribute="leading" secondItem="XwF-k8-Oqh" secondAttribute="leading" constant="13" id="IfI-hY-2YF"/>
+                                                        <constraint firstItem="QBk-su-4vG" firstAttribute="trailing" secondItem="2ix-V2-WFb" secondAttribute="trailing" id="Ksp-8F-Mov"/>
+                                                        <constraint firstItem="QBk-su-4vG" firstAttribute="bottom" secondItem="2ix-V2-WFb" secondAttribute="bottom" id="Ksv-gd-bzl"/>
                                                         <constraint firstAttribute="trailing" secondItem="bjg-bL-fLu" secondAttribute="trailing" constant="13" id="Oro-5Z-dce"/>
                                                         <constraint firstItem="2ix-V2-WFb" firstAttribute="top" secondItem="XwF-k8-Oqh" secondAttribute="top" constant="10" id="b4A-Fr-bl2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="bjg-bL-fLu" secondAttribute="bottom" constant="8" id="bf5-4V-YTF"/>
+                                                        <constraint firstItem="QBk-su-4vG" firstAttribute="leading" secondItem="2ix-V2-WFb" secondAttribute="leading" id="eOK-s6-Lyd"/>
                                                         <constraint firstAttribute="trailing" secondItem="iNz-43-hn0" secondAttribute="trailing" constant="13" id="f8x-HF-OzA"/>
+                                                        <constraint firstItem="QBk-su-4vG" firstAttribute="top" secondItem="2ix-V2-WFb" secondAttribute="top" id="wG5-1E-jkg"/>
                                                         <constraint firstItem="iNz-43-hn0" firstAttribute="leading" secondItem="bjg-bL-fLu" secondAttribute="leading" id="x0a-NL-iSD"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -93,6 +114,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imagePatient" destination="2ix-V2-WFb" id="9WX-0x-Xof"/>
+                                            <outlet property="labDescribtion" destination="bjg-bL-fLu" id="QzL-PY-hci"/>
+                                            <outlet property="labName" destination="iNz-43-hn0" id="jiP-pF-u7v"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,7 +129,7 @@
                         <constraints>
                             <constraint firstItem="VAc-IX-Whe" firstAttribute="bottom" secondItem="T5T-D9-K31" secondAttribute="bottom" id="PKH-K9-AUn"/>
                             <constraint firstItem="VAc-IX-Whe" firstAttribute="trailing" secondItem="T5T-D9-K31" secondAttribute="trailing" id="Uh7-ff-ViJ"/>
-                            <constraint firstItem="T5T-D9-K31" firstAttribute="top" secondItem="VAc-IX-Whe" secondAttribute="top" id="pML-gp-ayZ"/>
+                            <constraint firstItem="T5T-D9-K31" firstAttribute="top" secondItem="VAc-IX-Whe" secondAttribute="top" constant="20" id="pML-gp-ayZ"/>
                             <constraint firstItem="T5T-D9-K31" firstAttribute="leading" secondItem="VAc-IX-Whe" secondAttribute="leading" id="x52-fN-WGo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VAc-IX-Whe"/>

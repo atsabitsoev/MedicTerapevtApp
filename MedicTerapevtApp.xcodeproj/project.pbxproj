@@ -64,6 +64,9 @@
 		ACBFD21C229FFFD5009A1696 /* MyPatientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21B229FFFD5009A1696 /* MyPatientsVC.swift */; };
 		ACBFD21E229FFFE0009A1696 /* MyPatientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21D229FFFE0009A1696 /* MyPatientsTableView.swift */; };
 		ACBFD220229FFFF2009A1696 /* MyPatientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD21F229FFFF2009A1696 /* MyPatientsCell.swift */; };
+		ACBFD22222A016F7009A1696 /* GradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD22122A016F7009A1696 /* GradientLayerExtension.swift */; };
+		ACBFD22422A0173B009A1696 /* MyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD22322A0173B009A1696 /* MyNavigationBar.swift */; };
+		ACBFD22622A02447009A1696 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFD22522A02447009A1696 /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +130,9 @@
 		ACBFD21B229FFFD5009A1696 /* MyPatientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsVC.swift; sourceTree = "<group>"; };
 		ACBFD21D229FFFE0009A1696 /* MyPatientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsTableView.swift; sourceTree = "<group>"; };
 		ACBFD21F229FFFF2009A1696 /* MyPatientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsCell.swift; sourceTree = "<group>"; };
+		ACBFD22122A016F7009A1696 /* GradientLayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerExtension.swift; sourceTree = "<group>"; };
+		ACBFD22322A0173B009A1696 /* MyNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationBar.swift; sourceTree = "<group>"; };
+		ACBFD22522A02447009A1696 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,9 @@
 				ACBFD191229FBEAF009A1696 /* MainTabBarController.swift */,
 				ACBFD192229FBEAF009A1696 /* Gradient.swift */,
 				ACBFD193229FBEAF009A1696 /* Colors.swift */,
+				ACBFD22122A016F7009A1696 /* GradientLayerExtension.swift */,
+				ACBFD22322A0173B009A1696 /* MyNavigationBar.swift */,
+				ACBFD22522A02447009A1696 /* RoundedImageView.swift */,
 			);
 			path = GlobalEntities;
 			sourceTree = "<group>";
@@ -571,12 +580,14 @@
 				ACBFD19C229FBEAF009A1696 /* MainTabBarController.swift in Sources */,
 				ACBFD20A229FC9B6009A1696 /* ChatTableviewDelegate.swift in Sources */,
 				ACBFD19B229FBEAF009A1696 /* OpeningChatVC.swift in Sources */,
+				ACBFD22622A02447009A1696 /* RoundedImageView.swift in Sources */,
 				ACBFD1D4229FC23D009A1696 /* ViewGradientHeader.swift in Sources */,
 				ACBFD20B229FC9B6009A1696 /* ChatVC.swift in Sources */,
 				ACBFD1D1229FC23D009A1696 /* DiagnosticResultsCell.swift in Sources */,
 				ACBFD198229FBEAF009A1696 /* EnterView.swift in Sources */,
 				ACBFD1D3229FC23D009A1696 /* DiagnosticResultsVC.swift in Sources */,
 				ACBFD1E8229FC7B4009A1696 /* ExcercisesTableVIew.swift in Sources */,
+				ACBFD22222A016F7009A1696 /* GradientLayerExtension.swift in Sources */,
 				ACBFD197229FBEAF009A1696 /* RegistrationView.swift in Sources */,
 				ACBFD20C229FC9B6009A1696 /* ChatTFDelegate.swift in Sources */,
 				ACBFD199229FBEAF009A1696 /* NotificationNames.swift in Sources */,
@@ -585,6 +596,7 @@
 				ACBFD1E6229FC7B4009A1696 /* ExcercisesCell.swift in Sources */,
 				ACBFD21E229FFFE0009A1696 /* MyPatientsTableView.swift in Sources */,
 				ACBFD204229FC9B6009A1696 /* ChatImageVC.swift in Sources */,
+				ACBFD22422A0173B009A1696 /* MyNavigationBar.swift in Sources */,
 				ACBFD1E9229FC7B4009A1696 /* ViewPlay.swift in Sources */,
 				ACBFD21C229FFFD5009A1696 /* MyPatientsVC.swift in Sources */,
 				ACBFD20D229FC9B6009A1696 /* PenPalMessageCell.swift in Sources */,

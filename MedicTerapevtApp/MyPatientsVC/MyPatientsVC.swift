@@ -18,12 +18,38 @@ class MyPatientsVC: UIViewController {
 
     }
     
+    override func viewWillLayoutSubviews() {
+        setNavigationBar()
+    }
+    
     
     private func setTabBar() {
         
         let myPatientsImage = UIImage(named: "Чат иконка")!
         self.tabBarItem = UITabBarItem(title: "Мои пациенты", image: myPatientsImage, selectedImage: myPatientsImage)
         self.tabBarController?.selectedIndex = 0
+    }
+    
+    private func setNavigationBar() {
+        
+        let colors = [Colors().greenGradient1,
+                           Colors().greenGradient2]
+        
+        self.tabBarController!.navigationController!.navigationBar.setGradientBackground(colors: colors, startPoint: .bottomLeft, endPoint: .topRight)
+        let item = UINavigationItem(title: "Мои пациенты")
+        self.tabBarController?.navigationController?.navigationBar.setItems([item], animated: true)
+        
+    }
+    
+    func getImageFrom(gradientLayer:CAGradientLayer) -> UIImage? {
+        var gradientImage:UIImage?
+        UIGraphicsBeginImageContext(gradientLayer.frame.size)
+        if let context = UIGraphicsGetCurrentContext() {
+            gradientLayer.render(in: context)
+            gradientImage = UIGraphicsGetImageFromCurrentImageContext()?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
+        }
+        UIGraphicsEndImageContext()
+        return gradientImage!
     }
 
 }
